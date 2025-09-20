@@ -1,0 +1,7 @@
+MY ANSWERS
+1. Inside the root element
+2. an error
+3. Multiple elements are being rendered instead of one
+4. Declarative means high-level instruction that does not
+concern itself with the details of implementation
+5. It can be built up with small re-usable units
