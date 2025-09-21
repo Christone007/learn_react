@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, sans-serif;
+}
+
+.header {
+  background-color: #F55A5A;
+  color: #FFFFFF;
+  height: 55px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.nav {
+  height: 24px;
+  display: flex;
+  align-items: center;
+  padding: auto;
+}
+
+.nav-img {
+  width: 24px;
+}
+
+.nav-title {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-left: 10px;
+}
