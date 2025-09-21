@@ -39,7 +39,13 @@ body {
 .main {
 height: auto;
 padding: 30px 25px;
+background-image: url("/src/assets/react.svg");
+background-repeat: no-repeat;
+background-position: 130% 65%;
+background-blend-mode: #33373E;
+background-size: 263px;
 }
+
 
 .main-heading {
   font-family: Inter, sans-serif;
