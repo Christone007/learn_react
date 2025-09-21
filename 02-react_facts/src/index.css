@@ -57,6 +57,11 @@ padding: 30px 25px;
   font-family: Inter, sans-serif;
 }
 
-.main-list li {
+.main-list > li {
   padding-bottom: 20px;
+}
+
+.main-list > li::marker {
+  color: #61DAFB;
+  font-size: 1.5rem;
 }
