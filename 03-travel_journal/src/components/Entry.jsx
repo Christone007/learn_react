@@ -1,4 +1,6 @@
-export default function Entry() {
+export default function Entry(props) {
+  console.log(props);
+
   return (
     <div className="entry-card">
       <img
