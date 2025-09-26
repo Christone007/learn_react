@@ -4,14 +4,7 @@ import placesData from "/src/data";
 
 export default function App() {
   const entryElements = placesData.map((place) => (
-    <Entry
-      img={{ src: place.img.src, alt: place.img.alt }}
-      title={place.title}
-      country={place.country}
-      googleMapsLink={place.googleMapsLink}
-      dates={place.dates}
-      text={place.text}
-    />
+    <Entry key={place.id} {...place} />
   ));
 
   return (
