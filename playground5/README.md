@@ -1,16 +1,13 @@
-# React + Vite
+# PLAYGROUND 5
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Quiz
 
-Currently, two official plugins are available:
+1. I could pass either the new value or a callback function that takes the old value as an argument
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+2. When it is not derived from the old value
 
-## React Compiler
+3. When the new value is derived from the old value
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Ternary
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+let answer = isGoingOut ? "Yes" : "No;

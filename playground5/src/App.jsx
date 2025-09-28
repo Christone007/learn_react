@@ -5,12 +5,12 @@ export default function App() {
 
   function add() {
     console.log("add");
-    setCount(count + 1);
+    setCount((prevCount) => prevCount + 1);
   }
 
   function minus() {
     console.log("minus");
-    setCount(count - 1);
+    setCount((prevCount) => prevCount - 1);
   }
 
   return (
