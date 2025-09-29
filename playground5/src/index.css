@@ -38,12 +38,8 @@ button {
   font-weight: 800;
 }
 
-button:hover {
-  background-color: #656565;
-  font-size: 1.1rem;
-}
 
-.count {
+.count, .value{
   width: 100px;
   height: 100px;
   background-color: white;
@@ -55,6 +51,7 @@ button:hover {
   margin-bottom: 10px;
 }
 
+
 .minus {
   margin-right: -25px;
 }
@@ -64,3 +61,8 @@ button:hover {
 }
 
 
+.container2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

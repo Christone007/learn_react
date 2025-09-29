@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #70B85D;
+    color: white;
+}
+
+main {
+    text-align: center;
+}
+
+button {
+    width: 200px;
+    padding: 20px;
+    border: 2px solid white;
+    background-color: inherit;
+    margin: 30px auto 10px;
+    border-radius: 50px;
+    font-size: 1.3rem;
+    color: white;
+    font-weight: 800;
+}
+
+button:hover {
+    background-color: #FFFEF1;
+    color: #2C5E2E;
+}
+
+button:focus {
+    outline: 0;
+}
+
+p {
+    font-weight: 500;
+    font-size: 1.5rem;
+}
