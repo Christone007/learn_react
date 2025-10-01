@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 70px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+img {
+  width: 400px;
+  border-radius: 10px;
+  object-fit: contain;
+}
+
+button {
+  padding: 10px 10px;
+  border-radius: 7px;
+  background-color: #828282;
+  color: aliceblue;
+  width: 400px;
+  border: none;
+}

@@ -77,3 +77,8 @@ nav {
     content: "+";
     margin-right: 5px;
 }
+
+.search-button:hover {
+    border: 1px solid #141413;
+    background-color: #242424;
+}
