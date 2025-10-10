@@ -1,10 +1,124 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
+import React from "react";
+import ReactDOM from "react-dom/client";
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
-)
+function App() {
+  /**
+   * Challenge: grab the employment status from the form and log it
+   * to the console. (Remember to select one of the radios before submitting)
+   *
+   * Note: This won't work the way you might expect quite yet!
+   */
+
+  function signUp(formData) {
+    const email = formData.get("email");
+    const password = formData.get("password");
+    const employmentStatus = formData.get("employmentStatus");
+    const dietaryRestrictions = formData.getAll("dietaryRestrictions");
+    const favColor = formData.get("favColor");
+    console.log(
+      email,
+      password,
+      employmentStatus,
+      dietaryRestrictions,
+      favColor
+    );
+
+    console.log(Object.fromEntries(formData));
+  }
+
+  return (
+    <section>
+      <h1>Signup form</h1>
+      <form action={signUp}>
+        <label htmlFor="email">Email:</label>
+        <input
+          id="email"
+          defaultValue="joe@schmoe.com"
+          type="email"
+          name="email"
+          placeholder="joe@schmoe.com"
+        />
+
+        <label htmlFor="password">Password:</label>
+        <input
+          id="password"
+          defaultValue="password123"
+          type="password"
+          name="password"
+        />
+
+        <label htmlFor="description">Description:</label>
+        <textarea
+          id="description"
+          name="description"
+          defaultValue="This is a description"
+        ></textarea>
+
+        <fieldset>
+          <legend>Employment Status:</legend>
+          <label>
+            <input type="radio" name="employmentStatus" value="Unemployed" />
+            Unemployed
+          </label>
+          <label>
+            <input type="radio" name="employmentStatus" value="Part-time" />
+            Part-time
+          </label>
+          <label>
+            <input
+              type="radio"
+              name="employmentStatus"
+              defaultChecked={true}
+              value="Full-time"
+            />
+            Full-time
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Dietary Restrictions</legend>
+          <label>
+            <input
+              type="checkbox"
+              name="dietaryRestrictions"
+              value="kosher"
+              defaultChecked={true}
+            />
+            kosher
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              name="dietaryRestrictions"
+              value="vegan"
+              defaultChecked={true}
+            />
+            vegan
+          </label>
+          <label>
+            <input
+              type="checkbox"
+              name="dietaryRestrictions"
+              value="gluten-free"
+            />
+            gluten-free
+          </label>
+        </fieldset>
+
+        <label htmlFor="favColor"></label>
+        <select name="favColor" id="favColor">
+          <option value="" selected disabled>
+            --Choose a colour--
+          </option>
+          <option value="Red">Red</option>
+          <option value="Blue">Blue</option>
+          <option value="Green">Green</option>
+        </select>
+
+        <button>Submit</button>
+      </form>
+    </section>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App />);
