@@ -7,18 +7,14 @@ export default function Search() {
     <li key={ingredient}>{ingredient}</li>
   ));
 
-  function handleSubmit(e) {
-    e.preventDefault();
-    const formData = new FormData(e.currentTarget);
+  function handleSubmit(formData) {
     const newIngredient = formData.get("ingredient");
-
     setIngredients((prevIngredients) => [...prevIngredients, newIngredient]);
-    console.log(ingredients);
   }
 
   return (
     <section className="search">
-      <form action="" className="add-ingredient-form" onSubmit={handleSubmit}>
+      <form className="add-ingredient-form" action={handleSubmit}>
         <input
           type="text"
           aria-label="Add ingredient"
