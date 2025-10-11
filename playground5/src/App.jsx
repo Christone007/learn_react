@@ -5,5 +5,6 @@ import Contact from "/src/Contact";
 import Form from "/src/Form";
 
 export default function App() {
-  return <Form />;
+  // return <Counter />;
+  return <Contact />;
 }
