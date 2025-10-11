@@ -1,9 +1,20 @@
+import React from "react";
+
 export default function Joke(props) {
-  console.log(props);
+  const [isShown, setIsShown] = React.useState(false);
+
+  function toggleShown() {
+    setIsShown((prevIsShown) => !prevIsShown);
+  }
+  console.log(isShown);
+
   return (
     <div>
       {props.setup && <h1>{props.setup}</h1>}
-      <p>{props.punchline}</p>
+      {isShown && <p>{props.punchline}</p>}
+      <button onClick={toggleShown}>
+        {isShown ? "Hide Punchline" : "Show Punchline"}
+      </button>
       <hr />
     </div>
   );
