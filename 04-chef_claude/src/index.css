@@ -82,3 +82,36 @@ nav {
     border: 1px solid #141413;
     background-color: #242424;
 }
+
+h2 {
+    color: #141413;
+}
+
+.ingredients-list {
+    line-height: 38px;
+}
+
+.get-recipe-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px 40px;
+    background-color: #F0EFEB;
+    border-radius: 8px;
+    align-items: center;
+}
+
+.get-recipe-container > button {
+    height: 38px;
+    width: 115px;
+    padding: auto;
+    border-radius: 6px;
+    background-color: #D17557;
+    border: none;
+    color: white;
+}
+
+.get-recipe-container p {
+    font-weight: 400;
+    font-size: 0.9rem;
+}
