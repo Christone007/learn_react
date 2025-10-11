@@ -3,13 +3,16 @@ import React from "react";
 export default function Messages() {
   const [unreadMessages, setUnreadMessages] = React.useState([]);
 
+  const message =
+    unreadMessages.length == 0
+      ? "You're all caught up"
+      : unreadMessages.length == 1
+      ? "You have 1 unread message"
+      : `You have ${unreadMessages.length} unread messages`;
+
   return (
     <div>
-      {unreadMessages.length > 0 && (
-        <h1>You have {unreadMessages.length} unread messages!</h1>
-      )}
-
-      {unreadMessages.length == 0 && <p>You have no unread messages</p>}
+      <h1>{message}</h1>
     </div>
   );
 }
