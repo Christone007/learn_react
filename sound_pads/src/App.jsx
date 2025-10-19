@@ -8,8 +8,18 @@ export default function App(props) {
     backgroundColor: props.darkMode ? "#222222" : "#cccccc",
   };
 
+  function toggle() {
+    console.log("Clicked!");
+  }
+
   const padElements = pads.map((pad) => (
-    <Pad key={pad.id} id={pad.id} color={pad.color} on={pad.on} />
+    <Pad
+      key={pad.id}
+      id={pad.id}
+      color={pad.color}
+      on={pad.on}
+      handleClick={toggle}
+    />
   ));
 
   return (
