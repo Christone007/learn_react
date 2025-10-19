@@ -8,8 +8,28 @@ export default function App(props) {
     backgroundColor: props.darkMode ? "#222222" : "#cccccc",
   };
 
-  function toggle() {
-    console.log("Clicked!");
+  function toggle(id) {
+    // console.log(id);
+    const newPads = pads.map((pad) => {
+      if (pad.id == id) {
+        return {
+          ...pad,
+          on: !pad.on,
+        };
+      } else {
+        return pad;
+      }
+    });
+
+    setPads(newPads);
+    // console.log(pads);
+
+    // setPads((prevPads) => {
+    //   prevPads.map((pad) => {
+    //     return pad.id == id ? { ...pad, on: !pad.on } : pad;
+    //   });
+    // });
+    // console.log(pads);
   }
 
   const padElements = pads.map((pad) => (
