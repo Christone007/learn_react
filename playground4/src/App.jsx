@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "/src/Header";
 import Body from "/src/Body";
+import pads from "./pads";
 
 export default function App() {
   // const [result, setResult] = React.useState("Click Me");
@@ -24,8 +25,9 @@ export default function App() {
         onMouseOver={handleMouseOver}
       />
       <button onClick={handleClick}>{result}</button> */}
-      <Header userName={userName} />
-      <Body userName={userName} />
+      {/* <Header userName={userName} />
+      <Body userName={userName} /> */}
+      <div className="pad-container"></div>
     </main>
   );
 }

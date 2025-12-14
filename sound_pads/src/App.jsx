@@ -4,6 +4,7 @@ import Pad from "/src/Pad";
 
 export default function App(props) {
   const [pads, setPads] = React.useState(padsData);
+
   const style = {
     backgroundColor: props.darkMode ? "#222222" : "#cccccc",
   };
